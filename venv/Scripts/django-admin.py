@@ -1,4 +1,4 @@
-#!d:\skripsiapp\project1\venv\scripts\python.exe
+#!e:\project\2020\skripsi_d4ti_polinema\_github\olif\venv\scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":
