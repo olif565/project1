@@ -20,5 +20,9 @@ from home import views
 app_name = 'home'
 
 urlpatterns = [
-    path('', views.home_view, name='home_view'),
+    path('', views.IndexView.as_view(), name='home_view'),
+    path('<int:pk>/', views.DataDetailView.as_view(), name='detail'),
+    path('edit/<int:pk>/', views.edit, name='edit'),
+    path('create/', views.create, name='create'),
+    path('delete/<int:pk>/', views.delete, name='delete'),
 ]

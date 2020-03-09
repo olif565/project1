@@ -2,6 +2,10 @@ from django.contrib.auth import login, authenticate
 from .forms import SignUpForm, LoginForm
 from django.shortcuts import render, redirect
 from django.contrib import messages
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 def login_view(request):
@@ -12,6 +16,8 @@ def login_view(request):
             password = form.cleaned_data.get('password')
 
             user = authenticate(username=username, password=password)
+
+            logger.error(user)
 
             if user is not None:
                 if user.is_active:

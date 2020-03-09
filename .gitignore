@@ -1,7 +1,7 @@
 #Database
-db/
+#db/
 
 #Virtual Environment
-venv/
+#venv/
 
 .idea/
